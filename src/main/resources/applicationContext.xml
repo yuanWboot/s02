@@ -13,7 +13,12 @@
         <constructor-arg name="origin" value="欧洲"/>
         <constructor-arg name="price" value="9.8"/>
     </bean>
+<!--    利用静态工厂获取对象-->
     <bean id="apple4" class="com.zy.spring.ioc.factory.AppleStaticFactory"
     factory-method="createSweetApple">
     </bean>
+<!--    利用工厂实例化获取对象-->
+    <bean id="factoryInstance" class="com.zy.spring.ioc.factory.AppleFactoryInstance"/>
+    <bean id="apple5" factory-bean="factoryInstance" factory-method="createSweetApple"/>
+
 </beans>
