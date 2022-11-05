@@ -19,8 +19,12 @@ public class SpringApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext(configLocations);
         Apple apple3 = context.getBean("apple3", Apple.class);
         Apple apple7 = context.getBean("apple7", Apple.class);
+        //一个bean中允许没有id也没有name，获取bean时，需要把完整类名输出
+        Apple apple = context.getBean("com.zy.spring.ioc.entity.Apple", Apple.class);
         System.out.println(apple3.getTitle());
         System.out.println(apple7.getTitle());
+        //打印没有id没有name的bean的title
+        System.out.println(apple.getTitle());
 
     }
 }
