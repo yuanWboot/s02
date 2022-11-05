@@ -17,8 +17,10 @@ public class SpringApplication {
         //将配置文件的顺序调整，后面的apple2的bean会覆盖前面的bean
         String[] configLocations = new String[]{"classpath:applicationContext.xml","classpath:applicationContext-1.xml"};
         ApplicationContext context = new ClassPathXmlApplicationContext(configLocations);
-        Apple apple2 = context.getBean("apple2", Apple.class);
-        System.out.println(apple2.getTitle());
+        Apple apple3 = context.getBean("apple3", Apple.class);
+        Apple apple7 = context.getBean("apple7", Apple.class);
+        System.out.println(apple3.getTitle());
+        System.out.println(apple7.getTitle());
 
     }
 }
