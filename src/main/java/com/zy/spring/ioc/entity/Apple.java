@@ -11,6 +11,7 @@ public class Apple {
     }
 
     public Apple(String title, String color, String origin,Float price) {
+       // spring在运行的时候会自动检测参数的类型,如果是数字类型,会根据具体类型进行相应的转换
         System.out.println("通过构造方法创建对象，"+this);
         this.title = title;
         this.color = color;
