@@ -13,4 +13,7 @@
         <constructor-arg name="origin" value="欧洲"/>
         <constructor-arg name="price" value="9.8"/>
     </bean>
+    <bean id="apple4" class="com.zy.spring.ioc.factory.AppleStaticFactory"
+    factory-method="createSweetApple">
+    </bean>
 </beans>
