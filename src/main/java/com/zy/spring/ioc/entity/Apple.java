@@ -4,16 +4,18 @@ public class Apple {
     private String title;
     private String color;
     private String origin;
+    private Float price;
 
     public Apple() {
         System.out.println("Apple对象已创建"+this);
     }
 
-    public Apple(String title, String color, String origin) {
+    public Apple(String title, String color, String origin,Float price) {
         System.out.println("通过构造方法创建对象，"+this);
         this.title = title;
         this.color = color;
         this.origin = origin;
+        this.price = price;
     }
 
     public String getTitle() {
@@ -38,5 +40,13 @@ public class Apple {
 
     public void setOrigin(String origin) {
         this.origin = origin;
+    }
+
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
     }
 }

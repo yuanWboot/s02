@@ -3,7 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    bean标签默认通过构造方法创建对象-->
 <bean id="apple1" class="com.zy.spring.ioc.entity.Apple">
-
 </bean>
+
+    <bean id="apple2" class="com.zy.spring.ioc.entity.Apple">
+        <constructor-arg name="title" value="红富士"/>
+        <constructor-arg name="color" value="红色"/>
+        <constructor-arg name="origin" value="欧洲"/>
+        <constructor-arg name="price" value="9.8"/>
+    </bean>
 </beans>
