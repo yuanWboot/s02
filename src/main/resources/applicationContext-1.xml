@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    bean标签默认通过构造方法创建对象-->
+<bean id="apple2" class="com.zy.spring.ioc.entity.Apple">
+    <constructor-arg name="title" value="金苹果"/>
+    <constructor-arg name="color" value="金色"/>
+    <constructor-arg name="origin" value="中国"/>
+    <constructor-arg name="price" value="66"/>
+</bean>
+
+
+</beans>
